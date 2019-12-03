@@ -81,3 +81,9 @@ const pick = document.querySelector('.content-pick');
 pick.addEventListener('click', event => {
     pick.style.backgroundColor = 'lightgrey';
 });
+
+
+// prevent Default
+const navItem = document.getElementById("myAnchor").addEventListener("click", function(event){
+    event.preventDefault()
+});
