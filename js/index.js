@@ -36,3 +36,10 @@ const body = document.querySelector('body');
 window.addEventListener('resize', () => {
     body.style.backgroundColor = '#eee';
 });
+
+// dblclick
+const btn = document.querySelector('.btn')
+btn.addEventListener('dblclick', click);
+function click() {
+    btn.innerHTML = "Clicked Me!";
+}
