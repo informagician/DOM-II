@@ -57,3 +57,8 @@ headerImg.addEventListener('contextmenu', e => {
 window.addEventListener('beforeprint', (event) => {
     alert('Consider Environment Before Printing This Page');
 });
+
+// afterprint
+window.addEventListener('afterprint', (event) => {
+    alert('You Just Printed This Page');
+});
