@@ -47,6 +47,7 @@ function click() {
 const dest = document.querySelector('.destination:nth-child(2)');
 dest.addEventListener('click', event => {
     dest.style.backgroundColor = 'grey';
+    event.stopPropagation();
 });
 // contextmenu 
 headerImg.addEventListener('contextmenu', e => {
@@ -74,3 +75,9 @@ function fadeImg() {
   this.style.transition = "opacity 2s";
   this.style.opacity = "1";
 }
+
+// Propagation
+const pick = document.querySelector('.content-pick');
+pick.addEventListener('click', event => {
+    pick.style.backgroundColor = 'lightgrey';
+});
