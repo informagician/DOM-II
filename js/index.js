@@ -31,8 +31,8 @@ let scale = 1;
 const el = document.querySelector('img');
 el.addEventListener('wheel', zoom);
 
-// dblclick
-const dest = document.querySelector('destination');
-dest.addEventListener('mouseover', function (e) {
-    dest.classList.toggle = 'large';
+// resize
+const body = document.querySelector('body');
+window.addEventListener('resize', () => {
+    body.style.backgroundColor = '#eee';
 });
