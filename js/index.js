@@ -25,11 +25,11 @@ function zoom(event) {
     scale = Math.min(Math.max(.125, scale), 4);
   
     // Apply scale transform
-    el.style.transform = `scale(${scale})`;
+    headerImg.style.transform = `scale(${scale})`;
 }
 let scale = 1;
-const el = document.querySelector('img');
-el.addEventListener('wheel', zoom);
+const headerImg = document.querySelector('img');
+headerImg.addEventListener('wheel', zoom);
 
 // resize
 const body = document.querySelector('body');
@@ -43,3 +43,7 @@ btn.addEventListener('dblclick', click);
 function click() {
     btn.innerHTML = "Clicked Me!";
 }
+// contextmenu 
+headerImg.addEventListener('contextmenu', e => {
+    e.preventDefault();
+})
