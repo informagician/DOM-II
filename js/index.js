@@ -84,6 +84,17 @@ pick.addEventListener('click', event => {
 
 
 // prevent Default
-const navItem = document.getElementById("myAnchor").addEventListener("click", function(event){
-    event.preventDefault()
+const navItem = document.querySelectorAll(".nav-link");
+navItem.forEach(item => item.addEventListener("click", (event) => {
+    event.preventDefault();
+}));
+
+
+// GSAP
+document.querySelector('.logo-heading').addEventListener('click', () => {
+    gsap.to(".logo-heading", { 
+        duration: 5,
+        rotateY: 360,
+        ease: "elastic(1, 0.75)"
+      });
 });
