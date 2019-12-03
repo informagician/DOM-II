@@ -51,4 +51,9 @@ dest.addEventListener('click', event => {
 // contextmenu 
 headerImg.addEventListener('contextmenu', e => {
     e.preventDefault();
-})
+});
+
+// beforeprint
+window.addEventListener('beforeprint', (event) => {
+    alert('Consider Environment Before Printing This Page');
+});
