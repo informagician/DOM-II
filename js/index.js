@@ -43,6 +43,11 @@ btn.addEventListener('dblclick', click);
 function click() {
     btn.innerHTML = "Clicked Me!";
 }
+// click
+const dest = document.querySelector('.destination:nth-child(2)');
+dest.addEventListener('click', event => {
+    dest.style.backgroundColor = 'grey';
+});
 // contextmenu 
 headerImg.addEventListener('contextmenu', e => {
     e.preventDefault();
